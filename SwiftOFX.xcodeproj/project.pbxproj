@@ -55,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		101E8A5F208EFECE00E94DC2 /* Spec_v1.0.2_summary.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Spec_v1.0.2_summary.md; sourceTree = "<group>"; };
 		167A2E3C20C0D9BC58E3A123 /* Pods-SwiftOFX macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOFX macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOFX macOS/Pods-SwiftOFX macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		17AD35D111EFE9B3F2A7D672 /* Pods-SwiftOFX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOFX.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOFX/Pods-SwiftOFX.release.xcconfig"; sourceTree = "<group>"; };
 		2C656904E5E0FAE805B1F074 /* Pods-SwiftOFX iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftOFX iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftOFX iOS/Pods-SwiftOFX iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +137,7 @@
 		AA7AABEE1E653F9E00D99296 = {
 			isa = PBXGroup;
 			children = (
+				101E8A5F208EFECE00E94DC2 /* Spec_v1.0.2_summary.md */,
 				AADC11C41E7F9EA2008C5B52 /* LICENSE */,
 				AADC11C51E7F9EAC008C5B52 /* README.md */,
 				AADC11C61E7F9EB4008C5B52 /* SwiftOFX.podspec */,
