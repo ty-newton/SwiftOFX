@@ -1,11 +1,11 @@
 PODS:
-  - Reggie (0.2.1)
+  - Reggie (0.2.2)
 
 DEPENDENCIES:
   - Reggie
 
 SPEC CHECKSUMS:
-  Reggie: 8d057ad0fdaa508ff8f2b7f79f4e3591a03cb374
+  Reggie: 7233a7eb602ce12a01fa81ab560dcf79743675e0
 
 PODFILE CHECKSUM: a03d540581effd42f0c17acb4d79d39477220140
 

@@ -17,41 +17,49 @@ public typealias Identifier = String
 /// Information about the entity which provided the OFX file.
 public struct Institute: Information {
   static let label: String = "FI"
+  // FI contains ORG, FID?
 
   /// The name of the institution.
-  public var name: String
+  public var name: String // ORG
 
   /// An identifier for this specific institution.
-  public var id: Identifier
+  public var id: Identifier? // FID?
 
   init?(parent element: Element) {
-    guard let element = element[Institute.label] else { return nil }
-    name = element["ORG"]?.content ?? ""
-    id = element["FID"]?.content ?? ""
+    guard
+        let element = element[Institute.label],
+        let name = element["ORG"]?.content else { return nil }
+    self.name = name
+    id = element["FID"]?.content
   }
 }
 
 /// Information about the method through which the OFX file was obtained.
 public struct Session: Information {
   static let label: String = "SONRS"
+  //  SONRS contains STATUS, DTSERVER, USERKEY?, TSKEYEXPIRE?, LANGUAGE, DTPROFUP?, DTACCTUP?, FI?, SESSCOOKIE?
 
-//  var status: String // STATUS
+  var status: String // STATUS
 
-  /// The date when the OFX file was obtained.
-  public var date: Date
+  /// The date when the OFX file was obtained: local date on the server.
+  public var date: Date // DTSERVER
 
-//  var language: Strng // LANGUAGE
+  var language: Strng // LANGUAGE
 
   /// The institute that provided the OFX file.
-  public var institute: Institute
+  public var institute: Institute? // FI?
 
   init?(parent element: Element) {
     guard
-      let institute = Institute(parent: element),
+      let status = element["STATUS"]?.content,
       let dateString = element["DTSERVER"]?.content,
-      let date = Date(string: dateString) else { return nil }
-    self.institute = institute
+      let date = Date(string: dateString),
+      let language = element["LANGUAGE"]?.content else { return nil }
+    self.status = status
     self.date = date
+    self.language = language
+    let institute = Institute(parent: element)
+    self.institute = institute
   }
 }
 
