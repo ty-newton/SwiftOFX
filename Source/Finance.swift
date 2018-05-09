@@ -44,7 +44,7 @@ public struct Session: Information {
   /// The date when the OFX file was obtained: local date on the server.
   public var date: Date // DTSERVER
 
-  var language: Strng // LANGUAGE
+  var language: String // LANGUAGE
 
   /// The institute that provided the OFX file.
   public var institute: Institute? // FI?
